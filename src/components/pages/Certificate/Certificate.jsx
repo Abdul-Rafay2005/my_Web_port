@@ -1,6 +1,6 @@
 import "./Certificate.css";
 
-import cert1 from "../../../assets/images/arduino.png";
+import cert1 from "../../../assets/images/Arduino.png";
 import cert2 from "../../../assets/images/EthicalHacking.png";
 import cert3 from "../../../assets/images/Google.png";
 import cert4 from "../../../assets/images/N8N.png";
