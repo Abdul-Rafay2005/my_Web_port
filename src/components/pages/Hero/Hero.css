@@ -6,13 +6,13 @@
 
   --text-muted:#3f3f46;
 
-  --btn-border:rgba(255,255,255,0.15);
+  --btn-border:rgba(255,255,255,.15);
 
 }
 
 
 
-/* GLOBAL FIX */
+/* GLOBAL */
 
 html,
 body,
@@ -33,10 +33,9 @@ body,
 
 
 
-
-/* =========================
+/* =====================
    HERO
-========================= */
+===================== */
 
 
 .hero {
@@ -48,19 +47,29 @@ body,
 
   max-width:100vw;
 
+
   background:var(--bg-dark);
+
 
   position:relative;
 
+
   display:flex;
+
 
   align-items:center;
 
+
   justify-content:center;
+
 
   overflow:hidden;
 
+
   padding:24px;
+
+
+  box-sizing:border-box;
 
 
 }
@@ -72,10 +81,9 @@ body,
 
 
 
-
-/* =========================
-   DESKTOP LAYOUT
-========================= */
+/* =====================
+   DESKTOP
+===================== */
 
 
 .hero-split-display {
@@ -83,13 +91,18 @@ body,
 
   display:flex;
 
+
   align-items:center;
+
 
   justify-content:center;
 
+
   gap:40px;
 
+
   width:100%;
+
 
   max-width:1400px;
 
@@ -107,18 +120,24 @@ body,
 
   font-size:7.5rem;
 
+
   font-weight:900;
+
 
   text-transform:uppercase;
 
+
   letter-spacing:-2px;
 
-  flex:1;
 
   line-height:.9;
 
 
+  flex:1;
+
+
 }
+
 
 
 
@@ -129,6 +148,7 @@ body,
 
   color:var(--text-light);
 
+
   text-align:right;
 
 
@@ -137,11 +157,11 @@ body,
 
 
 
-
 .hero-text-right {
 
 
   color:var(--text-muted);
+
 
   text-align:left;
 
@@ -163,14 +183,18 @@ body,
 
   position:relative;
 
+
   display:flex;
 
-  justify-content:center;
 
   align-items:center;
 
 
+  justify-content:center;
+
+
 }
+
 
 
 
@@ -183,6 +207,7 @@ body,
 
 
   width:340px;
+
 
   height:340px;
 
@@ -202,6 +227,8 @@ body,
 
 
 
+
+
 .hero-avatar {
 
 
@@ -212,7 +239,7 @@ body,
 
 
   filter:drop-shadow(
-    0 20px 50px rgba(0,0,0,.8)
+  0 20px 50px rgba(0,0,0,.8)
   );
 
 
@@ -221,107 +248,6 @@ body,
 
 }
 
-
-
-
-
-
-
-/* =========================
-BUTTONS
-========================= */
-
-
-.hero-buttons-corner {
-
-
-  position:absolute;
-
-
-  bottom:50px;
-
-
-  left:60px;
-
-
-  display:flex;
-
-
-  gap:16px;
-
-
-}
-
-
-
-
-.btn {
-
-
-  text-decoration:none;
-
-
-  padding:12px 28px;
-
-
-  border-radius:8px;
-
-
-  font-weight:600;
-
-
-  font-size:.9rem;
-
-
-  display:flex;
-
-
-  align-items:center;
-
-
-  justify-content:center;
-
-
-  transition:.3s;
-
-
-}
-
-
-
-
-
-
-
-.btn-primary {
-
-
-  background:white;
-
-
-  color:var(--bg-dark);
-
-
-}
-
-
-
-
-
-
-.btn-secondary {
-
-
-  border:1px solid var(--btn-border);
-
-
-  color:white;
-
-
-  background:rgba(255,255,255,.02);
-
-
-}
 
 
 
@@ -356,14 +282,112 @@ transform:translateY(-10px);
 
 
 
+/* =====================
+BUTTONS
+===================== */
 
-/* =========================
+
+.hero-buttons-corner {
+
+
+  position:absolute;
+
+
+  bottom:50px;
+
+
+  left:60px;
+
+
+  display:flex;
+
+
+  gap:16px;
+
+
+}
+
+
+
+
+
+.btn {
+
+
+  text-decoration:none;
+
+
+  padding:12px 28px;
+
+
+  border-radius:8px;
+
+
+  font-weight:600;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  justify-content:center;
+
+
+  transition:.3s;
+
+
+}
+
+
+
+
+
+
+.btn-primary {
+
+
+  background:white;
+
+
+  color:var(--bg-dark);
+
+
+}
+
+
+
+
+
+.btn-secondary {
+
+
+  border:1px solid var(--btn-border);
+
+
+  color:white;
+
+
+  background:rgba(255,255,255,.02);
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================
 TABLET
-========================= */
+===================== */
 
 
 @media(max-width:1024px){
-
 
 
 .hero-text-left,
@@ -398,11 +422,9 @@ width:300px;
 
 
 
-
-
-/* =========================
+/* =====================
 MOBILE
-========================= */
+===================== */
 
 
 @media(max-width:768px){
@@ -412,10 +434,10 @@ MOBILE
 .hero {
 
 
-  min-height:auto;
+  min-height:100vh;
 
 
-  height:auto;
+  height:100vh;
 
 
   padding:90px 20px 40px;
@@ -430,13 +452,21 @@ MOBILE
   justify-content:flex-start;
 
 
+  box-sizing:border-box;
+
+
 }
 
 
 
 
 
+
+
 .hero-split-display {
+
+
+  display:flex;
 
 
   flex-direction:column;
@@ -484,8 +514,6 @@ MOBILE
 
 
 
-
-
 /* IMAGE */
 
 
@@ -503,14 +531,14 @@ MOBILE
 
 
 
-
 .hero-avatar {
 
 
-  width:180px;
+  width:170px;
 
 
 }
+
 
 
 
@@ -524,9 +552,6 @@ MOBILE
 
 
 }
-
-
-
 
 
 
@@ -563,8 +588,7 @@ MOBILE
 
 
 
-
-/* BUTTON AREA */
+/* BUTTONS */
 
 
 .hero-buttons-corner {
@@ -585,7 +609,7 @@ MOBILE
   width:100%;
 
 
-  margin-top:35px;
+  margin-top:30px;
 
 
   display:flex;
@@ -601,8 +625,6 @@ MOBILE
 
 
 }
-
-
 
 
 
@@ -627,7 +649,6 @@ MOBILE
 
 
 
-
 }
 
 
@@ -638,7 +659,8 @@ MOBILE
 
 
 
-/* SMALL PHONES */
+
+/* SMALL MOBILE */
 
 
 @media(max-width:480px){
@@ -655,8 +677,6 @@ padding-top:85px;
 
 
 
-
-
 .hero-text-left,
 .hero-text-right {
 
@@ -669,13 +689,15 @@ font-size:55px;
 
 
 
+
 .hero-avatar {
 
 
-width:160px;
+width:150px;
 
 
 }
+
 
 
 
@@ -687,6 +709,7 @@ margin-top:25px;
 
 
 }
+
 
 
 
