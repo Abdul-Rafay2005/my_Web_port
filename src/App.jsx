@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/pages/Hero/Hero";
 import About from "./components/pages/About/About";
 import Project from "./components/pages/Project/Project";
-import Achievements from "./components/pages/Achievements/achievements";
+import Achievements from "./components/pages/Achievements/Achievements";
 import Certification from "./components/pages/Certificate/Certificate";
 import Services from "./components/pages/Services/Services";
 import Contact from "./components/pages/Contact/Contact";
