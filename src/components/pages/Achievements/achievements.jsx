@@ -1,4 +1,4 @@
-import "./achievements.css";
+import "./Achievements.css";
 
 import img1 from "../../../assets/images/sts.jpeg";
 import img2 from "../../../assets/images/webwizard.png";
