@@ -425,39 +425,26 @@ width:300px;
 /* =====================
 MOBILE
 ===================== */
-
-
 @media(max-width:768px){
-
 
 
 .hero {
 
+  min-height:auto;
 
-  min-height:100vh;
+  height:auto;
 
-
-  height:100vh;
-
-
-  padding:90px 20px 40px;
-
+  padding:90px 20px 50px;
 
   display:flex;
 
-
   flex-direction:column;
-
 
   justify-content:flex-start;
 
-
   box-sizing:border-box;
 
-
 }
-
-
 
 
 
@@ -465,21 +452,15 @@ MOBILE
 
 .hero-split-display {
 
-
   display:flex;
-
 
   flex-direction:column;
 
-
   gap:0;
-
 
   width:100%;
 
-
 }
-
 
 
 
@@ -488,27 +469,19 @@ MOBILE
 
 /* HI I'M */
 
-
 .hero-text-left {
-
 
   order:1;
 
-
   font-size:64px;
-
 
   text-align:center;
 
-
   line-height:.8;
-
 
   margin:0;
 
-
 }
-
 
 
 
@@ -516,40 +489,29 @@ MOBILE
 
 /* IMAGE */
 
-
 .hero-image-wrapper {
-
 
   order:2;
 
-
-  margin:15px 0 5px;
-
+  margin:10px 0;
 
 }
-
 
 
 
 .hero-avatar {
 
-
   width:170px;
-
 
 }
 
 
 
-
 .glow-bg {
-
 
   width:150px;
 
-
   height:150px;
-
 
 }
 
@@ -560,24 +522,17 @@ MOBILE
 
 /* RAFAY */
 
-
 .hero-text-right {
-
 
   order:3;
 
-
   font-size:64px;
-
 
   text-align:center;
 
-
   line-height:.8;
 
-
   margin:10px 0 0;
-
 
 }
 
@@ -587,9 +542,7 @@ MOBILE
 
 
 
-
 /* BUTTONS */
-
 
 .hero-buttons-corner {
 
@@ -609,7 +562,7 @@ MOBILE
   width:100%;
 
 
-  margin-top:30px;
+  margin-top:25px;
 
 
   display:flex;
@@ -621,7 +574,7 @@ MOBILE
   align-items:center;
 
 
-  gap:15px;
+  gap:12px;
 
 
 }
@@ -632,46 +585,27 @@ MOBILE
 
 .btn {
 
-
   width:220px;
-
 
   height:50px;
 
-
   border-radius:30px;
 
-
-  font-size:1rem;
-
+}
 
 }
 
 
-
-}
-
-
-
-
-
-
-
-
-
-
-/* SMALL MOBILE */
 
 
 @media(max-width:480px){
 
 
-
 .hero {
 
+  padding-top:85px;
 
-padding-top:85px;
-
+  padding-bottom:30px;
 
 }
 
@@ -680,51 +614,25 @@ padding-top:85px;
 .hero-text-left,
 .hero-text-right {
 
-
-font-size:55px;
-
+  font-size:55px;
 
 }
-
-
 
 
 
 .hero-avatar {
 
-
-width:150px;
-
+  width:150px;
 
 }
-
-
 
 
 
 .hero-buttons-corner {
 
-
-margin-top:25px;
-
+  margin-top:20px;
 
 }
-
-
-
-
-
-.btn {
-
-
-width:210px;
-
-
-height:48px;
-
-
-}
-
 
 
 }
