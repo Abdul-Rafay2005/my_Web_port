@@ -32,7 +32,7 @@ const projects = [
     desc: "Personal portfolio website showcasing projects, achievements, and technical skills with a modern responsive design.",
     skills: ["HTML", "CSS", "Bootstrap"],
     githubUrl: "https://github.com/Abdul-Rafay2005/MY_Portfolio",
-    liveUrl: "https://raffay.me/",
+    liveUrl: "https://my-portfolio-seven-xi-95.vercel.app/",
   },
 
   {
