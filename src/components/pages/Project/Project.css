@@ -1,0 +1,204 @@
+/* ==========================================
+   PROJECT SECTION
+   ========================================== */
+
+   .project{
+    margin:50px auto;
+    max-width:1500px;
+    padding:10px;
+}
+
+.title{
+    margin-bottom:70px;
+    font-size:80px;
+    font-weight:900;
+    color:#4f4c4c;
+    text-align:center;
+    position:relative;
+}
+
+.title::after{
+    content:"";
+    width:10px;
+    height:2px;
+    background:#333;
+    display:block;
+    margin:15px auto 0;
+    border-radius:5px;
+}
+
+/* ==========================================
+   GRID LAYOUT
+   ========================================== */
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+/* ==========================================
+   PROJECT CARD
+   ========================================== */
+
+.project-card{
+    background:#d8d8d8;
+    border-radius:16px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    transition:all 0.35s ease;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    box-shadow:5px 18px 40px rgba(0,0,0,0.15);
+}
+
+/* ==========================================
+   IMAGE
+   ========================================== */
+
+.project-card img{
+    width:110%;
+    height:200px;
+    object-fit:cover;
+    transition:0.4s ease;
+}
+
+.project-card:hover img{
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   TEXT
+   ========================================== */
+
+.project-card h3{
+    font-size:22px;
+    font-weight:700;
+    text-align:center;
+    color:#222;
+    margin:20px 15px 10px;
+}
+
+.project-card p{
+    margin:0 20px 18px;
+    text-align:center;
+    color:#666;
+    font-size:14px;
+    line-height:1.7;
+    flex-grow:1;
+}
+
+/* ==========================================
+   SKILLS
+   ========================================== */
+
+.skills{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:0 15px 15px;
+}
+
+.skills a{
+    text-decoration:overline;
+    padding:7px 14px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#222,#555);
+    color:#413c3c;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    transition:all 0.3s ease;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.skills a:hover{
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#444,#777);
+    box-shadow:0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+.btns{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    padding:0 20px 20px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:9px 18px;
+    border-radius:25px;
+    border:2px solid #333;
+    color:#333;
+    font-size:13px;
+    font-weight:600;
+    transition:all 0.3s ease;
+}
+
+.btn:hover{
+    background:#333;
+    color:#fff;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width:1024px){
+
+    .project{
+        padding:40px 30px;
+    }
+
+    .projects-container{
+        grid-template-columns:repeat(2,1fr);
+        gap:25px;
+    }
+}
+
+@media (max-width:700px){
+
+    .projects-container{
+        grid-template-columns:1fr;
+    }
+
+    .project-card img{
+        height:220px;
+    }
+}
+
+@media (max-width:480px){
+
+    .project{
+        margin:50px auto;
+        padding:25px 15px;
+    }
+
+    .title{
+        font-size:32px;
+        margin-bottom:50px;
+    }
+
+    .project-card h3{
+        font-size:20px;
+    }
+
+    .project-card p{
+        font-size:13px;
+    }
+
+    .btns{
+        flex-wrap:wrap;
+    }
+}

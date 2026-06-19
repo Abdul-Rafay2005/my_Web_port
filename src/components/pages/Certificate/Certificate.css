@@ -1,0 +1,129 @@
+/* ===== SECTION ===== */
+
+.certifications {
+    max-width: 1300px;
+    margin: 100px auto;
+    padding: 0 24px;
+  }
+  
+  .certifications .title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .certifications .title h2 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+  
+  .certifications .title p {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  /* ===== GRID ===== */
+  
+  .certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+  }
+  
+  /* ===== CARD ===== */
+  
+  .cert-card {
+    background: #dfdbdb;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* ===== IMAGE ===== */
+  
+  .cert-img {
+    width: 100%;
+    height: 260px;
+    background: #dfdbdb;
+    padding: 12px;
+  }
+  
+  .cert-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 8px;
+    border-radius: 12px;
+  }
+  
+  /* ===== CONTENT ===== */
+  
+  .cert-content {
+    padding: 22px;
+    text-align: center;
+    border-top: 1px solid #f1f5f9;
+    flex: 1;
+  }
+  
+  .cert-content h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+  }
+  
+  .cert-content p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #6b7280;
+  }
+  
+  /* ===== RESPONSIVE ===== */
+  
+  @media (max-width: 992px) {
+    .certifications-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .certifications {
+      padding: 0 18px;
+    }
+  
+    .certifications .title h2 {
+      font-size: 2.2rem;
+    }
+  
+    .cert-img {
+      height: 220px;
+    }
+  
+    .certifications-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cert-content {
+      padding: 18px;
+    }
+  
+    .cert-content h3 {
+      font-size: 1.1rem;
+    }
+  
+    .cert-content p {
+      font-size: 0.9rem;
+    }
+  }

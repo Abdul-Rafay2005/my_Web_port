@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #d0d0d0 25%,
+        #9d9d9d 50%,
+        #646464 70%,
+        #292929 90%,
+        #000000 100%
+    );
+    /* Prevent horizontal scroll when mobile menu is open */
+    overflow-x: hidden; 
+}
+
+/* ==========================================
+   HEADER BASE (Floating Nav Bar)
+   ========================================== */
+.header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 85%;
+    padding: 14px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Scroll Effect State */
+.header.scroll {
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================
+   LOGO
+   ========================================== */
+.logo h1 {
+    color: #ddd;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo h1 span {
+    color: #777777;
+}
+
+/* ==========================================
+   DESKTOP NAVIGATION WRAPPER
+   ========================================== */
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* LINKS */
+.links {
+    gap: 30px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.links li a:hover {
+    color: #777777;
+    text-shadow: 0 0 8px rgba(119, 119, 119, 0.7);
+}
+
+/* SOCIAL ICONS */
+.icons {
+    gap: 18px;
+}
+
+.icons li {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.icons li a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.icons li a:hover {
+    color: #777777;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(119, 119, 119, 0.8));
+}
+
+/* ==========================================
+   MOBILE HAMBURGER BUTTON (Hidden on Desktop)
+   ========================================== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1010; /* Keep it above the sliding menu */
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+   ========================================== */
+@media (max-width: 1150px) {
+    .menu-toggle {
+        display: block; /* Show hamburger button */
+    }
+
+    /* Transform navigation container into a sliding drawer */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden completely off-screen by default */
+        width: 320px;
+        height: 100vh;
+        background: rgba(15, 15, 15, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+        
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        padding: 80px 40px;
+        transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 1005;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Activated state when hamburger clicked (slides in) */
+    .nav-container.open {
+        right: 0; 
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+
+    .links li a {
+        font-size: 18px;
+    }
+
+    .icons {
+        justify-content: center;
+        margin-top: 10px;
+        gap: 30px;
+    }
+    
+    .icons li {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        width: 92%;
+        padding: 12px 20px;
+    }
+
+    .nav-container {
+        width: 100%; /* Menu takes up full screen on very small phones */
+        border-left: none;
+    }
+}
